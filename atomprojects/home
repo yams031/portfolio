@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Home | YaMarie's Portfolio</title>
+    </head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <body style="background-color:Black;">
+            <style type="text/css">
+
+                #toMain
+                {
+                  border: solid 1px Black;
+                  background-image:url('http://i.imgur.com/dZX6Lrj.gif');
+                  background-size:100%;
+                  width: 1365px;
+                  height: 624px;
+                  position: fixed;
+                  top: 36%;
+                  left: 11%;
+                  margin-top: -200px;
+                  margin-left: -150px;
+                  color: #FFFFFF;
+                  }
+
+              </style>
+
+        <div class="w3-bar w3-black">
+            <a href="C:\Users\GWCUser72\Documents\atomprojects\Portfolio\home" class="w3-bar-item w3-button">Home</a>
+            <a href="C:\Users\GWCUser72\Documents\atomprojects\Portfolio\picsandvids" class="w3-bar-item w3-button">Photos & Videos</a>
+            <a href="C:\Users\GWCUser72\Documents\atomprojects\Portfolio\links" class="w3-bar-item w3-button">Links</a>
+              </div>
+
+        <center><div id="toMain">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1><b><font size="20"><font face="Arial">YaMarie Koroma's Portfolio</h1>
+          <h1><b><font color= "firebrick">Girls Who Code SIP <font color= "white"> @ <font color= "gold">Georgetown University, Washington D.C.</font></h1>
+              </div><center>
+
+        </body>
+</html>
