@@ -9,6 +9,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+  body {
+    background-color: FloralWhite ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -19,14 +27,16 @@
     }
 
     .jumbotron {
+      height: 100%;
+
     }
 
     .carousel-inner{
-      background-color:lightgrey;
+      background-color: lightblue;
     }
 
     .texts1 {
-      top: .5%;
+      top: 2%;
       left: 47.5%;
       position: absolute;
       text-align: right;
@@ -34,7 +44,7 @@
     }
 
     .texts2 {
-      top: 1%;
+      top: 5%;
       left: 55%;
       text-align: right;
       position: absolute;
@@ -43,7 +53,7 @@
 
     .texts3 {
       top: 1%;
-      left: 18%;
+      left: 25%;
       position: absolute;
       z-index: 99;
     }
@@ -70,16 +80,22 @@
 
     .title {
       top: -1.5%;
-      left: 40%;
+      left: 43%;
       color: white;
       position: fixed;
       z-index: 99;
       width: 68%;
     }
 
+    #bottompage {
+    }
+
+    .first{
+    }
+
     .icon {
       top: -1%;
-      left: 51%;
+      left: 54%;
       position: fixed;
       z-index: 99;
       width: 68%;
@@ -130,7 +146,7 @@
     <div class="carousel-inner">
       <div class="item active">
         <center><img src="http://i.imgur.com/CQwSR5Z.jpg" alt="welcome" style="width:45%;"><center>
-          <div class= "texts1"><header><h1> Welcome to<br><font color= "pink">Shelter 411!</font></h1></header></div>
+          <div class= "texts1"><header><h1> Welcome to<br><font color= "white">Shelter 411!</font></h1></header></div>
       </div>
 
       <div class="item">
@@ -139,8 +155,8 @@
       </div>
 
       <div class="item">
-        <center><img src="http://i.imgur.com/ZWRBmWh.jpg" alt="checkusout" style="width:59%;"><center>
-          <div class= "texts3"><header><h2> Check out our list of Animal and Homeless Shelters in the DMV! </h2></header></div>
+        <center><img src="http://i.imgur.com/DjM8kys.jpg" alt="checkusout" style="width: 52.5%;"><center>
+          <div class= "texts3"><header><br><br><h3> Check out our list of Animal and Homeless Shelters in the DMV! </h3></header></div>
       </div>
     </div>
 
@@ -159,8 +175,8 @@
 <!--                          slideshow                              -->
 
   <!--                          button                              -->
-    <button type="button" class="btn1 btn-info" >Click Here to find Animal Shelters!</button>
-    <button type="button" class="btn2 btn-info" >Click Here to find Homeless Shelters!</button>
+    <button type="button" class="btn1 btn-danger" >Click Here to find Animal Shelters!</button>
+    <button type="button" class="btn2 btn-danger" >Click Here to find Homeless Shelters!</button>
   <!--                          button                              -->
 
 <div id="bottompage" class="container-fluid bg-3 text-center">
@@ -171,7 +187,7 @@
 
   <!--                          down button                              -->
 
-  <br><h3>Other stuff</h3><br><br>
+  <br><h3>More Info</h3><br><br>
   <div class="row">
     <div class="col-sm-3">
       <p>Some text..</p>
@@ -216,6 +232,10 @@
 </footer>
 
 <script>
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
+
 $(document).on('click', 'a', function(event){
     event.preventDefault();
 
@@ -223,6 +243,7 @@ $(document).on('click', 'a', function(event){
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
 });
+
 </script>
 
 </body>
