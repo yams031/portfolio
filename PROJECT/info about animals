@@ -16,31 +16,12 @@
     background-attachment: fixed;
     background-position: center;
 }
-
   .navbar {
     margin-bottom: 0;
     border-radius: 0;
     position: fixed;
     overflow: hidden;
     width: 100%;
-    z-index: 99;
-}
-  .btn1 {
-    top: 88%;
-    left: 1%;
-    width: 15%;
-    position: fixed;
-    font-size: 20px;
-    margin: 4px 2px;
-    z-index: 99;
-}
-  .btn2 {
-    top: 88%;
-    left: 84%;
-    width: 15%;
-    position: fixed;
-    font-size: 20px;
-    margin: 4px 2px;
     z-index: 99;
 }
   .title {
@@ -62,7 +43,7 @@
     display: block;
     border-radius: 100%;
     border: 6px dashed #000;
-  }
+}
 
   footer {
     background-color: #f2f2f2;
@@ -87,9 +68,9 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\site.html">Home</a></li>
-        <li><a href="#">Info About Homelessness</a></li>
-        <li><a href="#">Info About Animals</a></li>
-        <li class="active"><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\about_us.html">About Us</a></li>
+        <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\homelessness_info">Info About Homelessness</a></li>
+        <li class="active"><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\animals_info">Info About Animals</a></li>
+        <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\about_us.html">About Us</a></li>
       </ul>
 
       <div class= "title"><h2>Shelter 411</h2></div>
@@ -101,87 +82,21 @@
       <!-- TABS -->
 <!-- NAV BAR -->
 
-<!-- About -->
-<br><br>
-<div id =container>
-       <table style="border: 5px solid Black ;margin: 0 auto; margin-top: 25px; color:black; background-color:#ACCFDC; font-size: 30px; " >
-       <tr>
-       <td>
-         <h1 style="margin-top: 0px; margin-bottom: 0px; font-size: 35px; padding-left: 0px; padding-right: 0px;"> ABOUT US! </h1>
-       </td>
-       </tr>
-       </table>
-       <br><div id=head style="border-bottom: 3px dotted black; margin-bottom:3px; "></div><br>
-<div class="about">
-  <table>
-    <tr>
-      <td><br><img class="img-circle" src="http://i.imgur.com/IkalkGh.png?1" style="width:33%;"></td>
-      <td id="pad">
-        <h1><u>YaMarie K.</u></h1>
-        <br>
-        <p>
-          Hello! My name is YaMarie and I am currently a senior in High school.
-          <br><br></br>
-        </p>
-      </td>
-    </tr>
-  </table>
-</div>
 
-<br><div id=head style="border-bottom: 3px dotted black; margin-bottom:3px; "></div><br>
 
-<div class="about">
-  <table>
-    <tr>
-      <td><br><img class="img-circle" src="http://i.imgur.com/WrVLHxU.jpg?1" style="width:20%;"></td>
-      <td id="pad">
-        <h1><u>Mamai M.</u></h1>
-        <br>
-        <p>
-          Hello! My name is Mamai and I am currently a senior in High school.
-          <br><br></br>
-        </p>
-      </td>
-    </tr>
-  </table>
-</div>
+<!-- SPACE FOR INFO  -->
 
-<br><div id=head style="border-bottom: 3px dotted black; margin-bottom:3px; "></div><br>
 
-<div class="about">
-  <table>
-    <tr>
-      <td><br><img class="img-circle" src="http://i.imgur.com/9MRZqIp.png?1" style="width:50%;"></td>
-      <td id="pad">
-        <h1><u>Melissa K.</u></h1>
-        <br>
-        <p>
-          Hello! My name is Melissa and I am currently a junior in High school.
-          <br><br></br>
-        </p>
-      </td>
-    </tr>
-  </table>
-</div>
 
-<br><div id=head style="border-bottom: 3px dotted black; margin-bottom:3px; "></div><br>
 
-<div class="about">
-  <table>
-    <tr>
-      <td><br><img class="img-circle" src="http://i.imgur.com/keMSg96.jpg?1" style="width:24%;"></td>
-      <td id="pad">
-        <h1><u>Mariam N.</u></h1>
-        <br>
-        <p>
-          Hello! My name is Mariam and I am currently a senior in High school.
-          <br><br></br>
-        </p>
-      </td>
-    </tr>
-  </table>
-</div>
-<br>
+
+
+
+
+
+<!-- SPACE FOR INFO  -->
+
+
 
 <script>
 $(document).ready(function(){
