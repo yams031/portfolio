@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="http://i.imgur.com/UUoktEX.png">
+  <title>Shelter411</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    background-color: FloralWhite ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+  .main {
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+    text-indent: 50px;
+    font-size: 25px;
+    background-color: lightblue;
+    z-index: -1
+}
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    z-index: 99;
+}
+  .title {
+    top: -1.5%;
+    left: 43%;
+    color: white;
+    position: fixed;
+    z-index: 99;
+    width: 68%;
+}
+  .icon {
+    top: -1%;
+    left: 54%;
+    position: fixed;
+    z-index: 99;
+    width: 68%;
+}
+  .img-circle {
+    display: block;
+    border-radius: 100%;
+    border: 6px dashed #000;
+}
+    .btn {
+    width: auto;
+    height: auto;
+    top: 210%;
+    left: 38%;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+}
+
+  footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+  </style>
+</head>
+<body style="background-color:white;">
+<!-- NAV BAR -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- TABS -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\site.html">Home</a></li>
+        <li class="active"><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\homelessness_info">Info About Homelessness</a></li>
+        <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\animals_info">Info About Animals</a></li>
+        <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\about_us.html">About Us</a></li>
+      </ul>
+
+      <div class= "title"><h2>Shelter 411</h2></div>
+      <div class="icon"><img src="http://i.imgur.com/UUoktEX.png" style="width:6%;"></div>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+</nav>
+      <!-- TABS -->
+      <!-- NAV BAR -->
+
+
+
+      <!-- SPACE FOR INFO  -->
+      <br><br>
+      <div id =container>
+          <table style="border: 5px solid Black ;margin: 0 auto; margin-top: 25px; color:black; background-color:#ACCFDC; font-size: 30px; " >
+         <tr>
+         <td>
+           <h1 style="margin-top: 0px; margin-bottom: 0px; font-size: 35px; padding-left: 0px; padding-right: 0px;"> WHY SOLVING HOMELESSNESS IS IMPORTANT! </h1>
+         </td>
+         </tr>
+         </table>
+         <br><div id=head style="border-bottom: 3px dotted black; margin-bottom:3px; "></div><br>
+      <div class= "main">
+      <p>Getting involved makes a difference in people’s lives that are affected by family homelessness. Research and experience demonstrate that homelessness causes severe trauma to children and youth, disrupting their relationships, putting their health and safety at risk, and hampering their development. Homeless children are more likely than other children to have physical and mental health problems, and experience hunger and malnutrition. Emotional distress, developmental delays, and decreased academic achievement are also more common in this population of children. Many of these children and youth experience deep poverty, instability and exposure to domestic violence before becoming homeless, and homelessness increases their vulnerability to additional trauma.
+      </p>
+
+      <div class="pic" align= "center"><img src="https://economicrt.org/wp-content/uploads/2005/09/2005_Estimated_Cost_to_End_Homelessness_Main_01-730x390.jpg" style="width:50%;"></div>
+      <br>
+      </div>
+
+      <div id =container>
+          <table style="border: 5px solid Black ;margin: 0 auto; margin-top: 25px; color:black; background-color:#ACCFDC; font-size: 30px; " >
+         <tr>
+         <td>
+           <h1 style="margin-top: 0px; margin-bottom: 0px; font-size: 35px; padding-left: 0px; padding-right: 0px;"> MORE INFO! </h1>
+         </td>
+         </tr>
+         </table>
+         <br><div id=head style="border-bottom: 3px dotted black; margin-bottom:3px; "></div><br>
+      <div class= "main">
+      <p>Many factors can contribute to a person becoming homeless. These factors include (but are not limited to):</p>
+      <li>Poverty</li>
+      <li>Lack of affordable housing</li>
+      <li>Lack of health care</li>
+      <li>Job loss</li>
+      <li>Mental illness</li>
+      <li>Domestic violence</li>
+      <li>Substance abuse</li>
+      <br>
+      <p>The National Alliance to End Homelessness states that there are 564,708 people experiencing homelessness on any given night in the US. 36,907 (6.38%) are children, 47,725 (8.33%) are veterans, and 269,991 (47.6%) are disabled and unable to work.</p>
+      <br>
+      </div>
+
+      <br>
+      <button type="button" class="btn btn-danger" align= "center" >Click Here to find Homeless Shelters!</button>
+      <br>
+
+      <div class= "citations">
+      <p><center>CITATIONS:<center/>
+        <i>"U.S. Homelessness Facts"</i>
+        <li>http://frontsteps.org/u-s-homelessness-facts/</li></p>
+      </div>
+
+      <!-- SPACE FOR INFO  -->
+
+
+
+      <script>
+      $(document).ready(function(){
+          $(this).scrollTop(0);
+      });
+      </script>
+
+      </body>
+      </html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="http://i.imgur.com/UUoktEX.png">
+  <title>Shelter411</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    background-color: FloralWhite ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+  .main {
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+    text-indent: 50px;
+    font-size: 25px;
+    background-color: lightblue;
+    z-index: -1
+}
+    .btn {
+    width: auto;
+    height: auto;
+    top: 284%;
+    left: 37%;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+}
+
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    z-index: 99;
+}
+  .title {
+    top: -1.5%;
+    left: 43%;
+    color: white;
+    position: fixed;
+    z-index: 99;
+    width: 68%;
+}
+  .icon {
+    top: -1%;
+    left: 54%;
+    position: fixed;
+    z-index: 99;
+    width: 68%;
+}
+  .img-circle {
+    display: block;
+    border-radius: 100%;
+    border: 6px dashed #000;
+}
+
+  footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+  </style>
+</head>
+<body style="background-color:white;">
+<!-- NAV BAR -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- TABS -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\site.html">Home</a></li>
+        <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\homelessness_info">Info About Homelessness</a></li>
+        <li class="active"><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\animals_info">Info About Animals</a></li>
+        <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\about_us.html">About Us</a></li>
+      </ul>
+
+      <div class= "title"><h2>Shelter 411</h2></div>
+      <div class="icon"><img src="http://i.imgur.com/UUoktEX.png" style="width:6%;"></div>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+</nav>
+      <!-- TABS -->
+<!-- NAV BAR -->
+
+<!-- INFO  -->
+<br><br>
+<div id =container>
+    <table style="border: 5px solid Black ;margin: 0 auto; margin-top: 25px; color:black; background-color:#ACCFDC; font-size: 30px; " >
+   <tr>
+   <td>
+     <h1 style="margin-top: 0px; margin-bottom: 0px; font-size: 35px; padding-left: 0px; padding-right: 0px;"> WHY ADOPTION IS IMPORTANT! </h1>
+   </td>
+   </tr>
+   </table>
+   <br><div id=head style="border-bottom: 3px dotted black; margin-bottom:3px; "></div><br>
+<div class= "main">
+<p><b>Because you'll save a life.</b></p>
+<li>Each year, 2.7 million adoptable dogs and cats are euthanized in the United States, simply because too many pets come into shelters and too few people consider adoption when looking for a pet. The number of euthanized animals could be reduced dramatically if more people adopted pets instead of buying them. When you adopt, you save a loving animal by making them part of your family and open up shelter space for another animal who might desperately need it.
+</li>
+<br>
+<p><b>Because you'll get a great animal.</b></p>
+<li>Animal shelters and rescue groups are brimming with happy, healthy pets just waiting for someone to take them home. Most shelter pets wound up there because of a human problem like a move or a divorce, not because the animals did anything wrong. Many are already housetrained and used to living with families.
+</li>
+<br>
+<p><b>Because it’ll cost you less.</b></p>
+<li>Usually when you adopt a pet, the cost of spay/neuter, first vaccinations (and sometimes even microchipping!) is included in the adoption price, which can save you some of the up front costs of adding a new member to your family. Depending on the animal, you may also save on housebreaking and training expenses.
+</li>
+<br>
+<p><b>Because it's one way to fight puppy mills.</b></p>
+<li>If you buy a dog from a pet store,online seller or flea market, you’re almost certainly getting a dog from a puppy mill.
+Puppy mills are factory-style breeding facilities that put profit above the welfare of dogs. Animals from puppy mills are housed in shockingly poor conditions with improper medical care, and are often very sick and behaviorally troubled as a result. The moms of these puppies are kept in cages to be bred over and over for years, without human companionship and with little hope of ever joining a family. And after they're no longer profitable, breeding dogs are simply discarded—either killed, abandoned or sold at auction.
+Puppy mills will continue to operate until people stop supporting them. By adopting a pet, you can be certain you aren't giving them a dime.
+</li>
+<br>
+<div class="pic" align= "center"><img src="http://i.imgur.com/sBUO3cx.jpg" style="width:50%;"></div>
+<br>
+</div>
+
+<div id =container>
+    <table style="border: 5px solid Black ;margin: 0 auto; margin-top: 25px; color:black; background-color:#ACCFDC; font-size: 30px; " >
+   <tr>
+   <td>
+     <h1 style="margin-top: 0px; margin-bottom: 0px; font-size: 35px; padding-left: 0px; padding-right: 0px;"> MORE INFO! </h1>
+   </td>
+   </tr>
+   </table>
+   <br><div id=head style="border-bottom: 3px dotted black; margin-bottom:3px; "></div><br>
+<div class= "main">
+<li> Approximately 6.5 million companion animals enter U.S. animal shelters nationwide every year. Of those, approximately 3.3 million are dogs and 3.2 million are cats.  </li>
+<br>
+<li>Each year, approximately 1.5 million shelter animals are euthanized (670,000 dogs and 860,000 cats).  The number of dogs and cats euthanized in U.S. shelters annually has declined from approximately 2.6 million in 2011.  This decline can be partially explained by an increase in the percentage of animals adopted and an increase in the number of stray animals successfully returned to their owners.</li>
+<br>
+<li>About 710,000 animals who enter shelters as strays are returned to their owners. Of those, 620,000 are dogs and only 90,000 are cats.</li>
+<br>
+<li>Approximately 3.2 million shelter animals are adopted each year (1.6 million dogs and 1.6 million cats).</li>
+<br>
+</div>
+
+      <br>
+      <button onclick="location.href='C:/Users/GWCUser72/Documents/atomprojects/PROJECT/animalshelters.html'" type="button" class="btn btn-danger" align= "center" >Click Here to find Animal Shelters!</button>
+      <br>
+
+<div class= "citations">
+<p><center>CITATIONS:<center/>
+  <i>"Top Reasons to Adopt a Pet"</i>
+  <li>http://www.humanesociety.org/issues/adopt/tips/top_reasons_adopt.html?referrer=https://www.google.com/</li></p>
+  <i>"Pet Statistics"</i>
+  <li>https://www.aspca.org/animal-homelessness/shelter-intake-and-surrender/pet-statistics</li></p>
+</div>
+
+<!-- SPACE FOR INFO  -->
+
+
+
+<script>
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
+</script>
+
+</body>
+</html>

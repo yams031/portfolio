@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="http://i.imgur.com/UUoktEX.png">
+  <title>Shelter411</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.column {
+  float: left;
+  left: 2%;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+@media (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.card {
+  ;
+}
+.container {
+  padding: 0 16px;
+}
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #ADD8E6;
+  text-align: center;
+  cursor: pointer;
+  width: 15%;
+}
+.button2 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #F08080;
+  text-align: center;
+  cursor: pointer;
+  width: 15%;
+}
+.button:hover {
+  background-color: #555;
+}
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+  background-color: FloralWhite ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center;
+}
+.main {
+  border: 1px solid black;
+  width: auto;
+  height: auto;
+  text-indent: 50px;
+  font-size: 25px;
+  background-color: lightblue;
+  z-index: -1
+}
+  .btn {
+  width: auto;
+  height: auto;
+  top: 284%;
+  left: 37%;
+  position: absolute;
+  text-align: center;
+  font-size: 20px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  z-index: 99;
+}
+.title {
+  top: -1.5%;
+  left: 43%;
+  color: white;
+  position: fixed;
+  z-index: 99;
+  width: 68%;
+}
+.icon {
+  top: -1%;
+  left: 54%;
+  position: fixed;
+  z-index: 99;
+  width: 68%;
+}
+.img-circle {
+  display: block;
+  border-radius: 100%;
+  border: 6px dashed #000;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+</style>
+</head>
+<body>
+  <!-- NAV BAR -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- TABS -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\site.html">Home</a></li>
+          <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\homelessness_info">Info About Homelessness</a></li>
+          <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\animals_info">Info About Animals</a></li>
+          <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\about_us.html">About Us</a></li>
+        </ul>
+
+        <div class= "title"><h2>Shelter 411</h2></div>
+        <div class="icon"><img src="http://i.imgur.com/UUoktEX.png" style="width:6%;"></div>
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div>
+  </nav>
+        <!-- TABS -->
+  <!-- NAV BAR -->
+
+<br><br>
+<h2>Animal Shelters in Washington D.C.</h2>
+<p></p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/frbHRD2.png" class="center" style="width:52.3%">
+      <div class="container">
+        <h2>Humane Rescue Alliance - <br> District of Columbia Animal <br> Care and Control</h2>
+        <p><button onclick="location.href='http://www.humanerescuealliance.org/volunteer'"class="button">Volunteer</button> <button onclick="location.href='https://secure3.convio.net/whsdc/site/Donation2;jsessionid=00000000.app317b?idb=0&df_id=6886&6886.donation=form1&NONCE_TOKEN=C83DA81800414561FCF02019BDBF23FE'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/Ilqqo65.png" class="center" style="width:90%">
+      <div class="container">
+        <h2><br>Rural Dog Rescue<br></h2>
+        <p><button onclick="location.href='http://www.ruraldogrescue.com/volunteer/'" class="button">Volunteer</button>  <button onclick="location.href='http://www.ruraldogrescue.com/donate/'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/HaMwYnF.jpg" class="center" style="width:90%">
+      <div class="container">
+        <h2><br>Metropolitan Guinea Pig Rescue<br></h2
+        <p><button onclick="location.href='https://www.facebook.com/MGPR.org/'" class="button">Contact</button> <button onclick="location.href='http://mgpr.org/newsite/Donate/Donate.htm'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<body>
+  <!-- NAV BAR -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- TABS -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\site.html">Home</a></li>
+          <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\homelessness_info">Info About Homelessness</a></li>
+          <li class="active"><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\animals_info">Info About Animals</a></li>
+          <li><a href="C:\Users\GWCUser72\Documents\atomprojects\PROJECT\about_us.html">About Us</a></li>
+        </ul>
+
+        <div class= "title"><h2>Shelter 411</h2></div>
+        <div class="icon"><img src="http://i.imgur.com/UUoktEX.png" style="width:6%;"></div>
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div>
+  </nav>
+        <!-- TABS -->
+  <!-- NAV BAR -->
+
+
+<br>
+<h2>Animal Shelters in Maryland</h2>
+<p></p>
+<br>
+
+<div class="row">
+  <!-- first row -->
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/FJPNYrR.jpg" class="center" style="width:104%">
+      <div class="container">
+        <h2>Tri-County Animal Shelter</h2>
+        <p><button onclick="location.href='http://awos.petfinder.com/shelters/MD112.html'" class="button">Volunteer</button>  <button onclick="location.href='http://www.charlescountymd.gov/es/animalshelter/tri-county-animal-shelter'" class="button2">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/44Jwiw2.jpg" class="center" style="width:83%">
+      <div class="container">
+        <h2>Maryland SPCA</h2>
+        <p><button onclick="location.href='http://www.mdspca.org/volunteer/'" class="button">Volunteer</button>  <button onclick="location.href='http://www.mdspca.org/give'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <br><br><br><br><br><br><br><img src="http://i.imgur.com/znYlUzt.jpg" class="center" style="width:100%"><br><br><br><br><br><br>
+      <div class="container">
+        <h2>Baltimore Humane Society<br></h2>
+        <p><button onclick="location.href='https://bmorehumane.org/volunteer/opportunities-and-training/'" class="button">Volunteer</button>  <button onclick="location.href='https://bmorehumane.org/donate/'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+</div> <!-- close row 1-->
+
+</body>
+
+<body>
+
+<h2></h2>
+<p></p>
+<br>
+
+<div class="row">
+  <!-- row 2-->
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/pxU1DsF.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2>SPCA-HS Spay/Neuter Clinic</h2>
+        <p><button onclick="location.href='http://www.pgspca.org/volunteer-app/'" class="button">Volunteer</button>  <button onclick="location.href='http://www.pgspca.org/give/donate/'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <br><br><br><br><br><br><br><br><img src="http://i.imgur.com/C1tdfr6.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2><br>Allegany County Animal Shelter<br></h2>
+        <p><button onclick="location.href='http://alleganyanimalshelter.com/volunteer/'" class="button">Volunteer</button>  <button onclick="location.href='http://alleganyanimalshelter.com/donate/'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/g9J1vax.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2>Baywater Animal Rescue</h2>
+        <p><button onclick="location.href='http://www.baywateranimalrescue.org/volunteer.html'" class="button">Volunteer</button>  <button onclick="location.href='http://www.baywateranimalrescue.org/donate-today.html'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+</div> <!-- close row 2-->
+
+</body>
+
+<body>
+
+<h2></h2>
+<p></p>
+<br>
+
+<div class="row">
+  <!-- row 3 -->
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/apMVU1S.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2><br>City of Greenbelt Animal Shelter<br></h2>
+        <p><button onclick="location.href='https://www.greenbeltonline.com/contact/'" class="button">Volunteer</button>  <button onclick="location.href='http://www.greenbeltmd.gov/index.aspx?NID=510'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/7aPJlqH.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2>The Humane Society of Kent<br> County, MD Inc.</h2>
+        <p><button onclick="location.href='http://kenthumane.org/volunteer/'" class="button">Volunteer</button>  <button onclick="location.href='http://kenthumane.org/give/'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/RVFStaJ.png" class="center" style="width:100%">
+      <div class="container">
+        <h2>The Baltimore Animal Rescue<br>and Care Shelter</h2>
+        <p><button onclick="location.href='http://baltimoreanimalshelter.org/volunteer'" class="button">Volunteer</button>  <button onclick="location.href='http://baltimoreanimalshelter.org/donate'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+</div> <!-- close row 3-->
+
+</body>
+
+<body>
+
+<h2></h2>
+<p></p>
+<br>
+
+<div class="row">
+  <!-- row 4 -->
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/8btiU4S.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2>Defenders of Animal Rights Inc</h2>
+        <p><button onclick="location.href='http://www.adopt-a-pet.org'" class="button">Volunteer</button>  <button onclick="location.href='http://www.adopt-a-pet.org/donateonline.html'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <br><img src="http://i.imgur.com/X8RLSfn.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2>Association For Animal Right</h2>
+        <p><button onclick="location.href='http://awos.petfinder.com/shelters/aarcenter.html'" class="button">Contact</button>  <button onclick="location.href='http://awos.petfinder.com/shelters/aarcenter.html'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+<!--      <img src="/w3images/team2.jpg" style="width:100%"> -->
+      <div class="container">
+        <h2>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<body>
+
+
+<br>
+<h2>Animal Shelters in Virginia</h2>
+<p></p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <br><br><br><br><img src="http://i.imgur.com/QswjZuP.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2><br>Animal Welfare League of<br> Arlington<br></h2>
+        <p><button onclick="location.href='https://www.awla.org/volunteer/volunteer-program/'" class="button">Volunteer</button>  <button onclick="location.href='https://www.awla.org/donate/donate-online/'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/NcKxWFW.png" class="center" style="width:100%">
+      <div class="container">
+        <h2><br>Animal Welfare League of<br> Alexandria<br></h2>
+        <p><button onclick="location.href='https://alexandriaanimals.org/volunteerfoster/'" class="button">Volunteer</button>  <button onclick="location.href='https://interland3.donorperfect.net/weblink/weblink.aspx?name=E112122&id=3'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/eEjjvXq.jpg" class="center" style="width:50%">
+      <div class="container">
+        <h2><br>Fairfax County Animal Shelter<br></h2>
+        <p><button onclick="location.href='http://www.fairfaxcounty.gov/animalshelter/volunteer.htm'" class="button">Volunteer</button>  <button onclick="location.href='http://www.fairfaxcounty.gov/animalshelter/donations.htm'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<body>
+
+<h2></h2>
+<p></p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/r2e46PT.png" class="center" style="width:100%">
+      <div class="container">
+        <h2>Homeward Trails Adoption<br> Center</h2>
+        <p><button onclick="location.href='https://www.homewardtrails.org/help-out/volunteer/#.WYi222XyfUo'"class="button">Volunteer</button>  <button onclick="location.href='https://www.homewardtrails.org/help-out/donate-money/#'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/oxL4SRL.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2>Virginia Beach SPCA</h2>
+        <p><button onclick="location.href='http://vbspca.com/get-involved/volunteer'" class="button">Volunteer</button>  <button onclick="location.href='http://vbspca.com/donations/general-donations'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <br><img src="http://i.imgur.com/nEjtjyy.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2>Loudoun County Animal<br> Shelter</h2>
+        <p><button onclick="location.href='https://www.loudoun.gov/index.aspx?NID=646'" class="button">Volunteer</button>  <button onclick="location.href='https://www.loudoun.gov/index.aspx?NID=645'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<body>
+
+<h2></h2>
+<p></p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/JRlikmv.jpg" class="center" style="width:81%">
+      <div class="container">
+        <h2>Friends Animal Shelter</h2>
+        <p><button onclick="location.href='http://bestfriends.org/sanctuary/volunteer'" class="button">Volunteer</button>  <button onclick="location.href='http://bestfriends.org/donate'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <br><br><br><br><br><img src="http://i.imgur.com/FXO6Fy3.png" class="center" style="width:105%">
+      <div class="container">
+        <h2>Spotsylvania Animal Shelters</h2>
+        <p><button onclick="location.href='https://www.petfinder.com/member-pages/VA153'" class="button">Contact</button>  <button onclick="location.href='https://www.petfinder.com/member-pages/VA153'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/rBOaJUl.jpg" class="center" style="width:65%">
+      <div class="container">
+        <h2>Orange County Animal Shelter</h2>
+        <p><button onclick="location.href='http://orangecountyva.gov/index.aspx?NID=171'" class="button">Volunteer</button>  <button onclick="location.href='http://orangecountyva.gov/index.aspx?nid=162'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+<body>
+
+<h2></h2>
+<p></p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="http://i.imgur.com/hgxTapS.jpg" class="center" style="width:100%">
+      <div class="container">
+        <h2>Prince William County Animal Shelter</h2>
+        <p><button onclick="location.href='http://awos.petfinder.com/shelters/pwcshelter.html'" class="button">Contact</button>  <button onclick="location.href='http://awos.petfinder.com/shelters/pwcshelter.html'" class="button2">Donate</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+  <!--      <img src="/w3images/team2.jpg" style="width:100%"> -->
+      <div class="container">
+        <h2>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+<!--      <img src="/w3images/team2.jpg" style="width:100%"> -->
+      <div class="container">
+        <h2>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  $(document).ready(function(){
+      $(this).scrollTop(0);
+  });
+  </script>
+
+</body>
+
+</html>

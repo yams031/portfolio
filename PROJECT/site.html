@@ -16,6 +16,14 @@
     background-attachment: fixed;
     background-position: center;
 }
+  #map {
+    height: 400px;
+    width: 100%;
+}
+  table {
+    border-none: collapse;
+    border: none;
+}
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -50,8 +58,15 @@
       position: absolute;
       z-index: 99;
 }
+    .small {
+      top: 95%;
+      left: 65%;
+      position: absolute;
+      z-index: 99;
+      color: white;
+}
     .btn1 {
-    top: 88%;
+    top: 84%;
     left: 1%;
     width: 15%;
     position: fixed;
@@ -60,7 +75,7 @@
     z-index: 99;
 }
     .btn2 {
-    top: 88%;
+    top: 84%;
     left: 84%;
     width: 15%;
     position: fixed;
@@ -141,11 +156,13 @@
       <div class="item active">
         <center><img src="http://i.imgur.com/CQwSR5Z.jpg" alt="welcome" style="width:45%;"><center>
           <div class= "texts1"><header><h1> Welcome to<br><font color= "white">Shelter 411!</font></h1></header></div>
+          <div class= "small"> Source: Petsmart<br></div>
+
       </div>
 
       <div class="item">
       <center><img src="http://i.imgur.com/uckzK9V.jpg" alt="dog" style="width:61%;">
-        <div class= "texts2"><header><h1> Advocate<br> <font color= "white">Adopt</font><br> Volunteer<br> Donate<br> </h1></header></div>
+        <div class= "texts2"><header><h1> Advocate<br> <font color= "white">Adopt</font><br> Volunteer<br> Donate<br></h1></header><br></div>
       </div>
 
       <div class="item">
@@ -169,8 +186,9 @@
 <!--                          slideshow                              -->
 
   <!--                          button                              -->
-    <button type="button" class="btn1 btn-danger" >Click Here to find Animal Shelters!</button>
-    <button type="button" class="btn2 btn-danger" >Click Here to find Homeless Shelters!</button>
+    <button type="button" class="btn1 btn-danger">Click Here for a list of Homeless Shelters!</button>
+    <button onclick="location.href='C:/Users/GWCUser72/Documents/atomprojects/PROJECT/animalshelters.html'" type="button" class="btn2 btn-danger">Click Here for a list of Animal Shelters!</button>
+
   <!--                          button                              -->
 
 <div id="bottompage" class="container-fluid bg-3 text-center">
@@ -181,47 +199,677 @@
 
   <!--                          down button                              -->
 
-  <br><h3> Map </h3><br><br>
+<!-- SHELTER MAP -->
+  <br><h3> Scroll For Maps </h3><br>
   <div class="row">
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div><br>
+    <table style="border: 5px solid Black ;margin: 0 auto; margin-top: 25px; color:black; background-color:#ACCFDC; font-size: 30px; " >
+    <tr>
+    <td>
+      <h1 style="margin-top: 0px; margin-bottom: 0px; font-size: 35px; padding-left: 0px; padding-right: 0px;"> Animal and Homeless Shelters in the DMV </h1>
+    </td>
+    </tr>
+    </table>
+    <br>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat:39.045753 , lng: -76.641273 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: uluru
+        });
+        //D.C.//
+        //Humane Rescue Alliance — District of Columbia Animal Care and Control//
+                var contentString = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h1 id="firstHeading" class="firstHeading">Humane Rescue Alliance — District of Columbia Animal Care and Control</h1>'+
+                    '<div id="bodyContent">'+
+                    '<p><b>Humane Rescue Alliance — District of Columbia Animal Care and Control</b></p>'+
+                    '<p>Adress: 1201 New York Ave NE, Washington, DC 20002</p> '+
+                    '<p><a href="http://www.humanerescuealliance.org/">'+
+                    'humanerescuealliance.org</a> '+
+                    'phone:(202) 576-6664.</p>'+
+                    '<table>'+
+                    '<tr>  <td>Monday</td> <td>closed</td>  </tr>  <tr><td>Tuesday</td>  <td>12-7pm</td></tr> '+
+                    '<tr>  <td>Wednesday</td>  <td>12-7pm</td></tr><tr><td>Thursday</td>  <td>12-7pm</td></tr> '+
+                    '<tr><td>Friday</td><td>12-7pm</td></tr>  <tr><td>Saturday</td>   <td>12-7pm</td></tr>'+
+                    '<tr>  <td>Sunday</td>  <td>12-7pm</td  </tr></table>'+
+                    '</div>'+
+                    '</div>';
+                var infowindow = new google.maps.InfoWindow({
+                  content: contentString
+                });
+                var marker = new google.maps.Marker({
+                  position: {lat:38.9134, lng: -76.9903},
+                  map: map,
+                  title:'Humane Rescue Alliance — District of Columbia Animal Care and Control'
+                });
+                marker.addListener('click', function() {
+                  infowindow.open(map, marker);
+                });
+      //  Humane Rescue Alliance & Medical Center
+            var stuffString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"> Humane Rescue Alliance & Medical Center</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Humane Rescue Alliance & Medical Center</b> '+
+            '<p>Address: 71 Oglethorpe St NW, Washington, DC 20011</p> '+
+            '<p><a href="http://www.humanerescuealliance.org/">'+
+            'humanerescuealliance.org</a> '+
+            'Phone: (202) 726-2556</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>closed</td>  </tr>  <tr><td>Tuesday</td>  <td>12-7pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>12-7pm</td></tr><tr><td>Thursday</td>  <td>12-7pm</td></tr> '+
+            '<tr><td>Friday</td><td>12-7pm</td></tr>  <tr><td>Saturday</td>   <td>12-7pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>12-7pm</td  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow2 = new google.maps.InfoWindow({
+          content: stuffString
+        });
+        var marker2 = new google.maps.Marker({
+           position: {lat:38.9614, lng: -77.0084},
+           map: map,
+          title:' Humane Rescue Alliance & Medical Center'
+        });
+        marker2.addListener('click', function() {
+          infowindow2.open(map, marker2);
+        });
+        //Rural Dog Rescue//
+        var hiString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Rural Dog Rescue</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Rural Dog Rescue</b></p>'+
+            '<p>Adress:733 8th St SE #1, Washington, DC 20003 </p> '+
+            '<p><a href="http://www.ruraldogrescue.com/">'+
+            'www.ruraldogrescue.com</a> '+
+            'phone:(410) 310-4420</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>closed</td>  </tr>  <tr><td>Tuesday</td>  <td>closed</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>closed</td></tr><tr><td>Thursday</td>  <td>closed</td></tr> '+
+            '<tr><td>Friday</td><td>closed</td></tr>  <tr><td>Saturday</td>   <td>12-3pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>closed  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow3 = new google.maps.InfoWindow({
+          content: hiString
+        });
+        var marker3 = new google.maps.Marker({
+          position: {lat:38.8801, lng:-76.9953 },
+          map: map,
+          title:'Rural Dog Rescue'
+        });
+        marker3.addListener('click', function() {
+          infowindow3.open(map, marker3);
+        });
+        //Metropolitan Guinea Pig Rescue//
+        var byeString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Metropolitan Guinea Pig Rescue</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Metropolitan Guinea Pig Rescue</b></p>'+
+            '<p>Adress: Washington, DC 20020 </p> '+
+            '<p><a href="http://mgpr.org/">'+
+            'mgpr.org</a> '+
+            'phone:(202) 575-2210</p>'+
+            'no add buisness hours'+
+            '</div>'+
+            '</div>';
+        var infowindow4 = new google.maps.InfoWindow({
+          content: byeString
+        });
+        var marker4 = new google.maps.Marker({
+          position: {lat:38.8629, lng:- 76.9701},
+          map: map,
+          title:'Metropolitan Guinea Pig Rescue'
+        });
+        marker4.addListener('click', function() {
+          infowindow4.open(map, marker4);
+        });
+        //Maryland//
+        //Tri-County Animal Shelter//
+        var soString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Tri-County Animal Shelter</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Tri-County Animal Shelter</b></p>'+
+            '<p>Adress:6707 Animal Shelter Rd, Hughesville, MD 20637 </p> '+
+            '<p><a href="https://www.charlescountymd.gov/es/animalshelter/tri-county-animal-shelter">'+
+            'www.charlescountymd.gov</a> '+
+            'phone:(301) 932-1713</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>10:00-5:30pm</td>  </tr>  <tr><td>Tuesday</td>  <td>10:00-5:30pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>10:00-5:30pm</td></tr><tr><td>Thursday</td>  <td>10:00-5:30pm</td></tr> '+
+            '<tr><td>Friday</td><td>10:00-5:30pm</td></tr>  <tr><td>Saturday</td>  <td>10:00-5:30pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>closed</td  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow5 = new google.maps.InfoWindow({
+          content: soString
+        });
+        var marker5 = new google.maps.Marker({
+          position: {lat:38.5270, lng:-76.7337 },
+          map: map,
+          title:'Tri-County Animal Shelter'
+        });
+        marker5.addListener('click', function() {
+          infowindow5.open(map, marker5);
+        });
+        //Maryland SPCA
+        var okayString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Maryland SPCAr</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Maryland SPCA</b></p>'+
+            '<p>Adress:3300 Falls Rd, Baltimore, MD 21211 </p> '+
+            '<p><a href="http://www.mdspca.org/">'+
+            'www.mdspca.org</a> '+
+            'phone:(410) 235-8826</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>2:30-6:30pm</td>  </tr>  <tr><td>Tuesday</td>  <td>2:30-6:30pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>12:00-5:00pm</td></tr><tr><td>Thursday</td>  <td>12:00-5:00pm</td></tr> '+
+            '<tr><td>Friday</td><td>12:00-5:00pm</td></tr>  <tr><td>Saturday</td>  <td>11:00-4:00pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>11:00-4:00pm</td  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow6 = new google.maps.InfoWindow({
+          content: okayString
+        });
+        var marker6 = new google.maps.Marker({
+          position: {lat:39.3271, lng:-76.6345 },
+          map: map,
+          title:'Maryland SPCA'
+        });
+        marker6.addListener('click', function() {
+          infowindow6.open(map, marker6);
+        });
+        //Baltimore Humane Society//
+            var okString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">Baltimore Humane Society</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Baltimore Humane Society</b></p>'+
+                '<p>Adress:1601 Nicodemus Rd, Reisterstown, MD 21136 </p> '+
+                '<p><a href="https://bmorehumane.org/">'+
+                'bmorehumane.org</a> '+
+                'phone:(410) 833-8848</p>'+
+                '<table>'+
+                '<tr>  <td>Monday</td> <td>closed</td>  </tr>  <tr><td>Tuesday</td>  <td>12-6:00pm</td></tr> '+
+                '<tr>  <td>Wednesday</td>  <td>12:00-6:00pm</td></tr><tr><td>Thursday</td>  <td>12:00-6:00pm</td></tr> '+
+                '<tr><td>Friday</td><td>12:00-6:00pm</td></tr>  <tr><td>Saturday</td>  <td>12:00-6:00pm</td></tr>'+
+                '<tr>  <td>Sunday</td>  <td>12:00-6:00pm</td  </tr></table>'+
+                '</div>'+
+                '</div>';
+            var infowindow7 = new google.maps.InfoWindow({
+              content: okString
+            });
+            var marker7 = new google.maps.Marker({
+              position: {lat:39.4463, lng:-76.8645 },
+              map: map,
+              title:'Baltimore Humane Society'
+            });
+            marker7.addListener('click', function() {
+              infowindow7.open(map, marker7);
+            });
+        //SPCA-HS Spay/Neuter Clinic//
+              var umString = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading"> SPCA-HS Spay/Neuter Clinic</h1>'+
+              '<div id="bodyContent">'+
+              '<p><b>SPCA-HS Spay/Neuter Clinic</b> '+
+              '<p>Address:8210 DArcy Rd, Forestville,MD 20747 </p> '+
+              '<p><a href="http://www.pgspca.org/clinic/">'+
+              'www.pgspca.org</a> '+
+              'Phone:(301) 262-5625 </p>'+
+              'No hours'+
+              '</div>'+
+              '</div>';
+          var infowindow8 = new google.maps.InfoWindow({
+            content: umString
+          });
+          var marker8 = new google.maps.Marker({
+            position: {lat:38.8590, lng:-76.8612},
+            map: map,
+            title:' SPCA-HS Spay/Neuter Clinic'
+          });
+          marker8.addListener('click', function() {
+            infowindow8.open(map, marker8);
+          });
+        //Allegany County Animal Shelter//
+        var idkString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Allegany County Animal Shelter</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Allegany County Animal Shelter</b></p>'+
+            '<p>Adress:  716 Furnace St, Cumberland, MD 21502</p> '+
+            '<p><a href="http://alleganyanimalshelter.com/">'+
+            'alleganyanimalshelter.com</a> '+
+            'phone:(301) 777-5930</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>9:00am-4:00pm</td>  </tr>  <tr><td>Tuesday</td>  <td>9:00am-4:00pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>9:00am-4:00pm</td></tr><tr><td>Thursday</td>  <td>9:00am-4:00pm</td></tr> '+
+            '<tr><td>Friday</td><td>9:00am-4:00pm</td></tr>  <tr><td>Saturday</td>   <td>9:00am-4:00pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>closed</td  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow9 = new google.maps.InfoWindow({
+          content: idkString
+        });
+        var marker9 = new google.maps.Marker({
+          position: {lat:39.6671, lng:-78.7661},
+          map: map,
+          title:'Allegany County Animal Shelter'
+        });
+        marker9.addListener('click', function() {
+          infowindow9.open(map, marker9);
+        });
+        //Baywater Animal Rescue//
+        var hipString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Baltimore Humane Society</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Baltimore Humane Society</b></p>'+
+            '<p>Adress:1601 Nicodemus Rd, Reisterstown, MD 21136 </p> '+
+            '<p><a href="https://bmorehumane.org/">'+
+            'bmorehumane.org</a> '+
+            'phone:(410) 833-8848</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>closed</td>  </tr>  <tr><td>Tuesday</td>  <td>12-6:00pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>12:00-6:00pm</td></tr><tr><td>Thursday</td>  <td>12:00-6:00pm</td></tr> '+
+            '<tr><td>Friday</td><td>12:00-6:00pm</td></tr>  <tr><td>Saturday</td>  <td>12:00-6:00pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>12:00-6:00pm</td  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow10 = new google.maps.InfoWindow({
+          content: hipString
+        });
+        var marker10 = new google.maps.Marker({
+          position: {lat:38.5170, lng:-76.0230},
+          map: map,
+          title:'Baywater Animal Rescue'
+        });
+        marker10.addListener('click', function() {
+          infowindow10.open(map, marker10);
+        });
+        //City of Greenbelt Animal Shelter//
+        var piString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">City of Greenbelt Animal Shelter</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>City of Greenbelt Animal Shelter</b></p>'+
+            '<p>address: 550A Crescent Rd, Greenbelt, MD 20770 </p> '+
+            '<p><a href="http://www.greenbeltmd.gov/index.aspx?NID=510">'+
+            'www.greenbeltmd.gov</a> '+
+            'phone:(301) 474-6124</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>closed</td>  </tr>  <tr><td>Tuesday</td>  <td>Closed</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>4-7pm</td></tr><tr><td>Thursday</td>  <td>Closed</td></tr> '+
+            '<tr><td>Friday</td><td>Closed</td></tr>  <tr><td>Saturday</td>  <td>9am-12pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>Closed</td  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow11 = new google.maps.InfoWindow({
+          content: piString
+        });
+        var marker11 = new google.maps.Marker({
+          position: {lat:39.0076, lng:-76.8911 },
+          map: map,
+          title:'City of Greenbelt Animal Shelter'
+        });
+        marker11.addListener('click', function() {
+          infowindow11.open(map, marker11);
+        });
+        //The Humane Society of Kent County, MD Inc.//
+        var pieString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">The Humane Society of Kent County, MD Inc.</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>The Humane Society of Kent County, MD Inc.</b></p>'+
+            '<p>adress:10720 Augustine Herman Hwy, Chestertown, MD 21620 </p> '+
+            '<p><a href="http://kenthumane.org/">'+
+            'kenthumane.org</a> '+
+            'phone:(410) 778-3648</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>11am-4pm</td>  </tr>  <tr><td>Tuesday</td>  <td>11am-4pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>Closed</td></tr><tr><td>Thursday</td>  <td>11am-4pm</td></tr> '+
+            '<tr><td>Friday</td><td>11am-4pm</td></tr>  <tr><td>Saturday</td>  <td>11am-4pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>Closed</td>  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow12 = new google.maps.InfoWindow({
+          content: pieString
+        });
+        var marker12 = new google.maps.Marker({
+          position: {lat:39.2719, lng:-76.0388 },
+          map: map,
+          title:'The Humane Society of Kent County, MD Inc.'
+        });
+        marker12.addListener('click', function() {
+          infowindow12.open(map, marker12);
+        });
+        //The Baltimore Animal Rescue and Care Shelter//
+        var noString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">The Baltimore Animal Rescue and Care Sheltery</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>The Baltimore Animal Rescue and Care Shelter</b></p>'+
+            '<p>Address: 301 Stockholm St, Baltimore, MD 21230 </p> '+
+            '<p><a href="http://baltimoreanimalshelter.org/">'+
+            'baltimoreanimalshelter.org</a> '+
+            'phone:(410) 396-4695</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>2-6pm</td>  </tr>  <tr><td>Tuesday</td>  <td>2-6pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>2-6pm</td></tr><tr><td>Thursday</td>  <td>2-pm</td></tr> '+
+            '<tr><td>Friday</td><td>2-6pm</td></tr>  <tr><td>Saturday</td>  <td>11am-40pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>11am-4pm</td  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow13 = new google.maps.InfoWindow({
+          content: noString
+        });
+        var marker13 = new google.maps.Marker({
+          position: {lat:39.2744, lng:-76.6227 },
+          map: map,
+          title:'The Baltimore Animal Rescue and Care Shelter'
+        });
+        marker13.addListener('click', function() {
+          infowindow13.open(map, marker13);
+        });
+        //Defenders of Animal Rights Inc//
+        var myString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Defenders of Animal Rights Inc</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Defenders of Animal Rights Inc</b></p>'+
+            '<p>address:14412 Old York Rd, Phoenix, MD 21131 </p> '+
+            '<p><a href="http://adopt-a-pet.org/">'+
+            'adopt-a-pet.org</a> '+
+            'phone:(410) 527-1466</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>10am-4pm</td>  </tr>  <tr><td>Tuesday</td>  <td>10am-4pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>10am-4pm</td></tr><tr><td>Thursday</td>  <td>10am-4pm</td></tr> '+
+            '<tr><td>Friday</td><td>10am-4pm</td></tr>  <tr><td>Saturday</td>  <td>10am-4pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>Closed</td  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow14 = new google.maps.InfoWindow({
+          content: myString
+        });
+        var marker14 = new google.maps.Marker({
+          position: {lat:39.5222, lng:-76.5762 },
+          map: map,
+          title:'Defenders of Animal Rights Inc'
+        });
+        marker14.addListener('click', function() {
+          infowindow14.open(map, marker14);
+        });
+        //Association For Animal Rights//
+        var yesString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Association For Animal Rights</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b></b>Association For Animal Rights</p>'+
+            '<p>Adress:67 Main St, Reisterstown, MD 21136 </p> '+
+            '<p><a href="http://awos.petfinder.com/shelters/aarcenter.html">'+
+            'awos.petfinder.com</a> '+
+            'phone:(410) 526-5224</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>closed</td>  </tr>  <tr><td>Tuesday</td>  <td>10:30am-7pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>10:30am-7pm</td></tr><tr><td>Thursday</td>  <td>10:30am-7pm</td></tr> '+
+            '<tr><td>Friday</td><td>10:30am-7pm</td></tr>  <tr><td>Saturday</td>  <td>10:30am-7pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>12-5pm</td>  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow15 = new google.maps.InfoWindow({
+          content: yesString
+        });2
+        var marker15 = new google.maps.Marker({
+          position: {lat:39.4677, lng:-76.8293 },
+          map: map,
+          title:'Association For Animal Rights'
+        });
+        marker15.addListener('click', function() {
+          infowindow15.open(map, marker15);
+        });
+        //virgina
+        //Animal Welfare League of Arlington//
+        var yessString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Animal Welfare League of Arlington</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b></b>Animal Welfare League of Arlington</p>'+
+            '<p>Adress:2650 S Arlington Mill Dr, Arlington, VA 22206 </p> '+
+            '<p><a href="https://www.awla.org/">'+
+            'www.awla.org</a> '+
+            'phone: (703) 931-9241</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>12-7p</td>  </tr>  <tr><td>Tuesday</td>  <td>Closed</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>12-7pm</td></tr><tr><td>Thursday</td>  <td>12-7pm</td></tr> '+
+            '<tr><td>Friday</td><td>12-7pm</td></tr>  <tr><td>Saturday</td>  <td>12-7pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>12-7pm</td>  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow16 = new google.maps.InfoWindow({
+          content: yessString
+        });
+        var marker16 = new google.maps.Marker({
+          position: {lat:38.8437, lng:-77.0929 },
+          map: map,
+          title:'Animal Welfare League of Arlington'
+        });
+        marker16.addListener('click', function() {
+          infowindow16.open(map, marker16);
+        });
+        //Animal Welfare League of Alexandria
+        var poopString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Animal Welfare League of Alexandria</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b></b>Animal Welfare League of Alexandria</p>'+
+            '<p>Adress:4101 Eisenhower Ave, Alexandria, VA 22304 </p> '+
+            '<p><a href="https://alexandriaanimals.org/">'+
+            'alexandriaanimals.org</a> '+
+            'phone:(703) 746-4774</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>9am-7pm</td>  </tr>  <tr><td>Tuesday</td>  <td>9am-7pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>closed</td></tr><tr><td>Thursday</td>  <td>9am-7pm</td></tr> '+
+            '<tr><td>Friday</td>9am-7pm<td></td></tr>  <tr><td>Saturday</td>  <td>11am-5pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>11am-5pm</td>  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow17 = new google.maps.InfoWindow({
+          content: poopString
+        });
+        var marker17 = new google.maps.Marker({
+          position: {lat:38.8053, lng:-77.1051 },
+          map: map,
+          title:'Animal Welfare League of Alexandria'
+        });
+        marker17.addListener('click', function() {
+          infowindow17.open(map, marker17);
+        });
+        //Fairfax County Animal Shelter//
+        var marker18 = new google.maps.Marker({
+          position: {lat:38.8563, lng:-77.3725 },
+          map: map
+        });
+        var yesString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Animal Welfare League of Arlington</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b></b>Animal Welfare League of Arlington</p>'+
+            '<p>Adress: </p> '+
+            '<p><a href="">'+
+            '</a> '+
+            'phone:</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td></td>  </tr>  <tr><td>Tuesday</td>  <td></td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td></td></tr><tr><td>Thursday</td>  <td></td></tr> '+
+            '<tr><td>Friday</td><td></td></tr>  <tr><td>Saturday</td>  <td></td></tr>'+
+            '<tr>  <td>Sunday</td>  <td></td>  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow16 = new google.maps.InfoWindow({
+          content: yesString
+        });
+        var marker16 = new google.maps.Marker({
+          position: {lat:38.8437, lng:-77.0929 },
+          map: map,
+          title:'Animal Welfare League of Arlington'
+        });
+        marker16.addListener('click', function() {
+          infowindow16.open(map, marker16);
+        });
+        //Homeward Trails Adoption Center//
+        var marker19 = new google.maps.Marker({
+          position: {lat:38.8015, lng:-77.3298 },
+          map: map,
+        });
+        var yesString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Animal Welfare League of Arlington</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b></b>Animal Welfare League of Arlington</p>'+
+            '<p>Adress: </p> '+
+            '<p><a href="">'+
+            '</a> '+
+            'phone:</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td></td>  </tr>  <tr><td>Tuesday</td>  <td></td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td></td></tr><tr><td>Thursday</td>  <td></td></tr> '+
+            '<tr><td>Friday</td><td></td></tr>  <tr><td>Saturday</td>  <td></td></tr>'+
+            '<tr>  <td>Sunday</td>  <td></td>  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow18 = new google.maps.InfoWindow({
+          content: yesString
+        });
+        var marker19 = new google.maps.Marker({
+          position: {lat:38.8015, lng:-77.3298 },
+          map: map,
+          title:'Homeward Trails Adoption Center'
+        });
+        marker19.addListener('click', function() {
+          infowindow19.open(map, marker19);
+        });
+        //Virginia Beach SPCA//
+        var whyString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Virginia Beach SPCA</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b></b>Virginia Beach SPCA</p>'+
+            '<p>Adress: 3040 Holland Road, Virginia Beach, VA 23453</p> '+
+            '<p><a href="http://vbspca.com/">'+
+            'vbspca.com</a> '+
+            'phone:(757) 427-0070</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>12-6pm</td>  </tr>  <tr><td>Tuesday</td>  <td>12-9pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>2-6pm</td></tr><tr><td>Thursday</td>  <td>12am-6pm</td></tr> '+
+            '<tr><td>Friday</td><td></td>10am-4pm</tr>  <tr><td>Saturday</td>  <td>10am-4pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>10am-4pm</td>  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow20 = new google.maps.InfoWindow({
+          content: whyString
+        });
+        var marker20 = new google.maps.Marker({
+          position: {lat:36.7846, lng:-76.0780 },
+          map: map,
+          title:'Virginia Beach SPCA'
+        });
+        marker20.addListener('click', function() {
+          infowindow20.open(map, marker20);
+        });
+        //Prince William County Animal Shelter//
+        var brandString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Prince William County Animal Shelter</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b></b>Prince William County Animal Shelter</p>'+
+            '<p>Adress: 14807 Bristow Rd, Manassas, VA 20112</p> '+
+            '<p><a href="http://www.pwcgov.org/government/dept/police/animalcontrol/pages/default.aspx">'+
+            'www.pwcgov.org</a> '+
+            'phone:(703) 792-6465</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>Closed</td>  </tr>  <tr><td>Tuesday</td>  <td>11am-5pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>11am-5pm</td></tr><tr><td>Thursday</td>  <td>11am-5pm</td></tr> '+
+            '<tr><td>Friday</td><td>11am-5pm</td></tr>  <tr><td>Saturday</td>  <td></td>10am-4pm</tr>'+
+            '<tr>  <td>Sunday</td>  <td>12-4pm</td>  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow21 = new google.maps.InfoWindow({
+          content: brandString
+        });
+        var marker21 = new google.maps.Marker({
+          position: {lat:38.6348, lng:-77.4305 },
+          map: map,
+          title:'Prince William County Animal Shelter '
+        });
+        marker21.addListener('click', function() {
+          infowindow21.open(map, marker21);
+        });
+        //Loudoun County Animal Shelter//
+        var cocoString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Loudoun County Animal Shelter</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b></b>Loudoun County Animal Shelter</p>'+
+            '<p>Adress:39820 Charles Town Pike, Waterford, VA 20197 </p> '+
+            '<p><a href="https://www.loudoun.gov/animals">'+
+            'www.loudoun.gov</a> '+
+            'phone:(703) 777-0406</p>'+
+            '<table>'+
+            '<tr>  <td>Monday</td> <td>closed</td>  </tr>  <tr><td>Tuesday</td>  <td>11:30-5pm</td></tr> '+
+            '<tr>  <td>Wednesday</td>  <td>11:30-5pm</td></tr><tr><td>Thursday</td>  <td></td></tr> '+
+            '<tr><td>Friday</td>11:30-7pm<td></td></tr>  <tr><td>Saturday</td>  <td>11:30-5pm</td></tr>'+
+            '<tr>  <td>Sunday</td>  <td>11:30-5pm</td>  </tr></table>'+
+            '</div>'+
+            '</div>';
+        var infowindow22 = new google.maps.InfoWindow({
+          content: cocoString
+        });
+        var marker22 = new google.maps.Marker({
+          position: {lat:39.1626, lng:-77.6376 },
+          map: map,
+          title:'Loudoun County Animal Shelter'
+        });
+        marker22.addListener('click', function() {
+          infowindow22.open(map, marker22);
+        });
+}
 
-<div class="container-fluid bg-3 text-center">
-  <div class="row">
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWINCdZReVV0kx1GOyxN3aaI-fVrQCy_o&callback=initMap">
+    </script>
   </div>
-</div><br><br><br><br><br><br><br>
+<!-- SHELTER MAP -->
+
+
+<br><br><br><br><br><br>
 
 </footer>
 
